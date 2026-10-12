@@ -1,30 +1,37 @@
 # Post-Quantum Finance Is Inevitable. EternaX Is Its Foundation.
 
-EternaX is a market-infrastructure Layer-1 blockchain designed for future-proof financial markets, where security, identity, and settlement remain safe under quantum adversaries without sacrificing throughput or latency.
+**Quantum-safe private settlement at market speed.**
 
-Most blockchains cannot adopt post-quantum cryptography without major performance loss, complex migrations, and ecosystem-wide upgrades. EternaX does not have that trade-off. Every asset and application on EternaX — stablecoins, balances, margin accounts, vaults — inherits post-quantum protection automatically.
+EternaX is a post-quantum-native, EVM-compatible Layer-1 for institutional stablecoin issuance, RWA tokenization, tokenized funds, collateral movement, and settlement — plus a migration path for assets on classical chains.
 
-## Design Goals
+Most blockchains cannot adopt post-quantum cryptography without major throughput loss, complex migrations, and ecosystem-wide upgrades. EternaX is built PQ-native: every asset and application inherits post-quantum protection by default.
 
-- **Post-Quantum by Default**: Native PQ-secure accounts, transaction authentication, and consensus.
+## Design
 
-- **High-Performance Execution**: Sub-second finality (~120ms), optimized verification paths, and gasless execution at the edge.
+- **Post-quantum by default** — accounts, transaction authentication, and consensus anchored on **SLH-DSA** (NIST FIPS 205).
+- **Compact PQ authentication** — **SILMARILS**, a ~160-byte designated-verifier scheme co-developed with UBC, keeps the PQ throughput penalty minimal.
+- **Crypto-agility** — authentication is separated from authorization, so algorithms can rotate without re-issuance, re-onboarding, or a hard fork.
+- **Auditable privacy** — confidential by default, with scoped selective disclosure for auditors and supervisors; no public order-flow MEV.
+- **Dual-gate MPC custody** — signature-agnostic threshold authorization for custodians and MPC providers.
+- **Fast finality** — targeting 20–50 ms soft and 400–520 ms hard finality.
 
-- **Composable Market Infrastructure**: Deterministic execution, scheduling primitives, and policy-enforced contracts for continuous market systems.
+## Try it
 
-- **MEV-Resistant Ordering & Auditable Privacy**: Designed for fair execution and institutional-grade auditability.
+- **Pluto testnet** — public PQ-enabled EVM testnet: [pluto-testnet.eternax.ai](https://pluto-testnet.eternax.ai/web-wallet/) · tooling in [`pluto-testnet-tools`](https://github.com/eternax-ai/pluto-testnet-tools)
+- **Pilot programme** — 90-day institutional pilots: [eternax.ai/pilot](https://eternax.ai/pilot.html)
 
-## Cryptography & Systems Research
+## Research
 
-EternaX integrates novel cryptographic and distributed systems research into production infrastructure:
+- [SILMARILS: Designated-Verifier Authentication with Information-Theoretic Security](https://arxiv.org/abs/2605.03230) · [reference implementation](https://github.com/eternax-ai/silmarils-paper)
+- [Threshold Authorization Without Threshold Signatures: Signature-Agnostic MPC Custody](https://arxiv.org/abs/2607.08226) · [`dual-gate-mpc`](https://github.com/eternax-ai/dual-gate-mpc)
+- [The Native-Signature Boundary in Post-Quantum Distributed Authorization](https://arxiv.org/abs/2609.03547)
+- Reports: [eternax.ai/reports](https://eternax.ai/reports/)
 
- - **Information-Theoretic Post-Quantum Digital Signatures** optimized for distributed verification and low-latency consensus, enabling PQ security with minimal TPS degradation compared to classical schemes.
+## Open source
 
-- **Coded Networking & Reliable Broadcast** to reduce p95/p99 propagation latency under load.
+- [`pq-onchainid`](https://github.com/eternax-ai/pq-onchainid) — SLH-DSA verification for ERC-3643 / ONCHAINID compliance flows
+- [`utxo-ots`](https://github.com/eternax-ai/utxo-ots) — Bitcoin-ledger-finalized one-time hash signatures via standard P2WSH
 
-- **Parallel & Asynchronous BFT** multi-instance consensus with fairness guarantees and fast finality.
+---
 
-- **Confidential Execution** for private order flow, verifiable inference, and MEV mitigation.
-
-
-Contact: info@eternax.ai
+[eternax.ai](https://eternax.ai) · info@eternax.ai
