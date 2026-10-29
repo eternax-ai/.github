@@ -16,6 +16,7 @@ Index of papers, cryptanalysis, reports and code: [`research`](https://github.co
 - [The Native-Signature Boundary in Post-Quantum Distributed Authorization](https://arxiv.org/abs/2609.03547)
 - [Threshold Authorization Without Threshold Signatures: Signature-Agnostic MPC Custody](https://arxiv.org/abs/2607.08226) · [`dual-gate-mpc`](https://github.com/eternax-ai/dual-gate-mpc)
 - [SILMARILS: Information-Theoretic and Quantum-Secure Designated-Verifier Signatures](https://arxiv.org/abs/2605.03230) · [`silmarils-paper`](https://github.com/eternax-ai/silmarils-paper)
+- [The 100-Key Vault: One-Time Vaulting for Bitcoin](https://eternax.ai/blogs/one-time-vault/index.html) · [`eternax-bitcoin-vault`](https://github.com/eternax-ai/eternax-bitcoin-vault)
 - [Collision attacks on 39-step SHA-256 below generic search](https://eternax.ai/blogs/sha-256-39-step-collisions-below-generic-search/index.html)
 - Reports: [eternax.ai/reports](https://eternax.ai/reports/index.html)
 
@@ -29,6 +30,7 @@ Index of papers, cryptanalysis, reports and code: [`research`](https://github.co
 
 - [`dual-gate-mpc`](https://github.com/eternax-ai/dual-gate-mpc) — reference implementation of dual-gate custody: signature-agnostic threshold authorization (Rust, TypeScript, Solidity)
 - [`silmarils-paper`](https://github.com/eternax-ai/silmarils-paper) — Rust reference implementation of SILMARILS designated-verifier signatures
+- [`eternax-bitcoin-vault`](https://github.com/eternax-ai/eternax-bitcoin-vault) — One-Time Vaulting: 100-key one-time P2WSH vaults on today's Bitcoin, no fork
 - [`pq-onchainid`](https://github.com/eternax-ai/pq-onchainid) — SLH-DSA and ML-DSA claim verification for ERC-3643 / ONCHAINID compliance flows
 - [`utxo-ots`](https://github.com/eternax-ai/utxo-ots) — one-time hash signatures finalized on the Bitcoin ledger through standard P2WSH
 
